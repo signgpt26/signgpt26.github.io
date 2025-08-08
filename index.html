@@ -44,6 +44,7 @@
 
 <body>
 
+
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
@@ -51,40 +52,62 @@
         <div class="column has-text-centered">
           <h1 class="title is-2 publication-title">SignGPT: Taming LLM for 
             Sign Language Translation, Generation and Conversation </h1>
-          <h2 class="title is-4 publication-title">This page is under construction ... 🔨</h2>
+          <h2 class="title is-4 publication-title">Anonymous submission</h2>
 
           <div class="column has-text-centered">
             <div class="publication-links">
-              
-
-              <!-- Code Link. -->
+              <!-- PDF Link. -->
               <!-- <span class="link-block">
-                <a href="https://signgpt26.github.io/"
+                <a href="https://arxiv.org/pdf/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span> -->
+              <!-- <span class="link-block">
+                <a href="https://arxiv.org/abs/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span> -->
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/google/nerfies"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
-                  <span>Code</span>
+                  <span>Data comming</span>
                   </a>
-              </span> -->
-
-              <!-- Dataset Link.  -->
-              
-
-              <!-- <span class="link-block">
-                <a href="https://signgpt26.github.io/"
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://github.com/google/nerfies/releases/tag/0.1"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="far fa-images"></i>
                   </span>
-                  <span>Data is coming</span>
-                </a>
-                <p>
-                  The complete code for training and testing, along with the dataset, will be publicly available. 
-                </p> -->
-
-           
+                  <span>Code comming</span>
+                  </a>
             </div>
+            <p>
+                Code, models, along with the GPT-4 pseudo GLOSS annotations of the How2Sign dataset will be released.
+            </p>
 
           </div>
         </div>
@@ -119,10 +142,183 @@
             Third, we design a pre-training and instruction-tuning strategy, enabling SignGPT to handle sign language translation and generation based 
             on  various instructions. 
           </p>
+          <p>
+            Quantitative and qualitative experiments demonstrate that our approach achieves state-of-the-art performance on the public 
+            sign language datasets How2Sign and Phoenix-2014T. 
+          </p>
         </div>
       </div>
     </div>
     <!--/ Abstract. -->
+
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Teaser. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <!-- <h2 class="title is-3">Teaser</h2> -->
+        <img src="./static/images/teaser.png" 
+              controls
+              muted
+              preload
+              playsinline
+              width="75%" />
+        <div class="content has-text-justified">
+          <p>
+            SignGPT allows users to input sign language along with instructions or text descriptions, enabling SLT and SLG. Additionally, it supports sign language conversation.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Teaser. -->
+  </div>
+</section>
+
+
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-2">Visualization results</h2>
+    <p>
+        Since the Sign Language Translation task has reliable quantitative metrics (such as BLEU), and we have provided sufficient quantitative analysis in the paper, we only present the results for Sign Language Generation and Sign Language Conversation here.
+    </p>
+    
+    <br>
+
+    <!-- Re-rendering. -->
+    <h3 class="title is-3">Sign Language Conversation</h3>
+    <div class="content has-text-justified">
+      <p>
+        Here, we present the sign language conversations generated by SignGPT. All sign language motions are generated by SignGPT, while the text dialogues are inferred by ChatGPT.
+      </p>
+    </div>
+    <div class="content has-text-centered">
+      <video id="replay-video"
+             controls
+             muted
+             preload
+             playsinline
+             width="75%">
+        <source src="./static/videos/SignGPT-SLC.mp4"
+                type="video/mp4">
+      </video>
+    </div>
+
+
+    <br>
+
+    <h2 class="title is-3">Sign Language Generation</h2>
+    <div class="columns is-centered">
+
+      <!-- Visual Effects. -->
+      
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-5">Generated Sign Language by MotionGPT</h2>
+          <p>
+            A lot of what's required, is stressing the importance of communication.
+          </p>
+          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/MotionGPT-SLG/[MotionGPT] A lot of what's required, is stressing the importance of communication.mp4"
+                    type="video/mp4">
+          </video>
+          <hr>
+          <p>
+            I'm going to show you all the ingredients of this recipe.
+          </p>
+          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/MotionGPT-SLG/[MotionGPT] I'm going to show you all the ingredients of this recipe.mp4"
+                    type="video/mp4">
+          </video>
+          <hr>
+          <p>
+             We want a eleven o'clock and a one o'clock with your toes.
+          </p>
+          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/MotionGPT-SLG/[MotionGPT] We want a eleven o'clock and a one o'clock with your toes.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <!--/ Visual Effects. -->
+
+      <!-- Matting. -->
+      <div class="column">
+        <h2 class="title is-5">Generated Sign Language by SignGPT (Ours)</h2>
+        <div class="columns is-centered">
+          <div class="column content">
+            <p>
+             A lot of what's required, is stressing the importance of communication.
+            </p>
+            <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/SignGPT-SLG/[SignGPT] A lot of what's required, is stressing the importance of communication.mp4"
+                        type="video/mp4">
+            </video>
+            <hr>
+            <p>
+             I'm going to show you all the ingredients of this recipe.
+            </p>
+            <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/SignGPT-SLG/[SignGPT] I'm going to show you all the ingredients of this recipe127.mp4"
+                        type="video/mp4">
+            </video>
+            <hr>
+            <p>
+            We want a eleven o'clock and a one o'clock with your toes.
+            </p>
+            <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/SignGPT-SLG/[SignGPT] We want a eleven o'clock and a one o'clock with your toes.mp4"
+                        type="video/mp4">
+            </video>
+            </div>
+
+        </div>
+      </div>
+    </div>
+    <!--/ Matting. -->
+
+   
+
+
+
+      </div>
+    </div>
+    <!--/ Animation. -->
+
+
+    <!-- Concurrent Work. -->
+    <!-- <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Related Links</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            There's a lot of excellent work that was introduced around the same time as ours.
+          </p>
+          <p>
+            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
+          </p>
+          <p>
+            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
+            both use deformation fields to model non-rigid scenes.
+          </p>
+          <p>
+            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
+          </p>
+          <p>
+            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
+          </p>
+        </div>
+      </div>
+    </div> -->
+    <!--/ Concurrent Work. -->
 
   </div>
 </section>
